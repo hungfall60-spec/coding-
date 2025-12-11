@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Smooth Scroll Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">My Smooth Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <h2>Welcome</h2>
+        <p>Scroll down to see smooth animations and modern design.</p>
+        <img src="https://via.placeholder.com/600x300" alt="" class="slide-in">
+<img src=home1.jpg
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>This section describes who I am and what I do.</p>
+I am a beginner in this so please support me.
+I help people to learn coding and making websites
+you can find me on tiktok name@matterkizza.
+    </section>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:hungfall60gmail.com">hungfall60gmail.com</a></p>
+        <p>Phone: +256753148046</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Smooth Website</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll animations
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
+<section id="gallery" class="section">
+    <h2>Game Gallery</h2>
+    <div class="gallery"> 
+    <img src="my game3.jpg" alt="Game 1">
+    <img src="my game2.jpg" alt="Game 2">
+</div>
+        
